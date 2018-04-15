@@ -9,6 +9,9 @@ def crop(img, x, y, h, w):
     crop_img = img[y:y+h, x:x+w]
     return crop_img
 
+#Create output and obj folders if they are missing
+def createFolders():
+
 def getMoments(img):
     grey_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     image, contours, hierarchy = cv2.findContours(grey_scale,1 ,2)
